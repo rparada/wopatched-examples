@@ -1,2 +1,19 @@
+# Eclipse workspace metadata
 .metadata/
+
+# macOS
 .DS_Store
+
+# Maven
+**/target/
+
+# WOLips
+**/build/
+
+# Eclipse project files (optional)
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
