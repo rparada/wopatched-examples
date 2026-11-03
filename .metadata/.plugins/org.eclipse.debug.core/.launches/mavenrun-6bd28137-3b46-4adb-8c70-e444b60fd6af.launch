@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.m2e.Maven2LaunchConfigurationType">
+    <booleanAttribute key="M2_BATCH" value="false"/>
+    <stringAttribute key="M2_GOALS" value="-U archetype:generate"/>
+    <listAttribute key="M2_PROPERTIES">
+        <listEntry value="JavaVersion=1.8"/>
+        <listEntry value="WonderVersion=7.5-SNAPSHOT"/>
+        <listEntry value="archetypeGroupId=org.wocommunity"/>
+        <listEntry value="archetypeArtifactId=erxapplication-archetype"/>
+        <listEntry value="archetypeVersion=3.0"/>
+        <listEntry value="groupId=ehcm.webapps"/>
+        <listEntry value="artifactId=play"/>
+        <listEntry value="version=0.0.1-SNAPSHOT"/>
+        <listEntry value="package=ehcm.webapps.play"/>
+        <listEntry value="outputDirectory=/Users/a07290a/Dev/eclipse-workspaces/wonder-7.5"/>
+    </listAttribute>
+    <booleanAttribute key="M2_SAVE_BEFORE_LAUNCH" value="false"/>
+    <stringAttribute key="org.eclipse.debug.core.terminate.timestamp" value="1793668530108"/>
+    <booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/var/folders/gc/4x437h5x1dj7rg94njb0_fp40000gp/T/m2e-archetypeGenerator13162657590696945264"/>
+</launchConfiguration>
