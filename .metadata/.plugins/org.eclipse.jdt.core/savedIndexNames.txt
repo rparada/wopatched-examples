@@ -1,5 +1,0 @@
-INDEX VERSION 1.134+/Users/a07290a/Dev/eclipse-workspaces/wonder-7.5/.metadata/.plugins/org.eclipse.jdt.core
-934733394.index
-4202581614.index
-741540485.index
-1865797976.index
