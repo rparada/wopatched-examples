@@ -4,6 +4,8 @@ These two applications run with wopatched 2.0.0
 
 ## Requirements
 
+I tested this with Java 21 because Wonder failed to build with Java 27.
+
 You will need [rparada/wonder](https://github.com/rparada/wonder) and should check out the `wonder-7.5-snapshot-wopatched` branch.  This branch is based on Wonder 7.5-SNAPSHOT and includes several improvements, including our migration from Log4j to SLF4J, enhancements to `ERXSQLHelper` to support Oracle batch-fetching syntax, and other fixes. It also replaces dependencies on the legacy Apple WebObjects frameworks with their **wopatched 2.0.0** counterparts.  As part of this transition, **wopatched** also removes the dependency on JavaXML.
 
 [rparada/wopatched](https://github.com/rparada/wopatching) provides WebObjects-compatible framework replacements with commonly used patches already integrated, eliminating classpath ordering issues during both development and runtime.
