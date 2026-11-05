@@ -17,11 +17,12 @@ Example applications, **fluffy** and **play** are available in [rparada/wopatche
 `wopatches7` must be installed before `wopatched`, since `wopatched` consumes artifacts produced by `wopatches7`. Once both projects have been installed into your local Maven repository ()`~/.m2/repository`), allowing Wonder to resolve `wopatched` version 2.0.0.
 
 ```bash
-mkdir -p ~/scm
-cd ~/scm
+mkdir ~/scm
 
+cd ~/scm
 git clone https://github.com/rparada/wopatching.git
 git clone https://github.com/rparada/wonder.git
+git clone https://github.com/rparada/wopatched-examples.git
 
 cd ~/scm/wopatching/wopatches7
 mvn clean install
