@@ -67,7 +67,7 @@ This is exactly what we want: applications can continue to depend on Wonder fram
 
 For example:
 
-```bash
+```
 ricardo@MacBook-Air fluffy % mvn dependency:tree
 [INFO] Scanning for projects...
 [INFO]
