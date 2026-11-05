@@ -71,14 +71,14 @@ For example:
 ricardo@MacBook-Air fluffy % mvn dependency:tree
 [INFO] Scanning for projects...
 [INFO]
-[INFO] ------------------------< ehcm.webapps:fluffy >-------------------------
+[INFO] ------------------------< demo.webapps:fluffy >-------------------------
 [INFO] Building fluffy WebObjects Application 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] ---------------------------[ woapplication ]----------------------------
 [INFO] Rejected auto-discovered prefixes for remote repository wocommunity (prefixes-wocommunity.txt): Declares itself unsupported
 [INFO]
 [INFO] --- dependency:3.11.0:tree (default-cli) @ fluffy ---
-[INFO] ehcm.webapps:fluffy:woapplication:0.0.1-SNAPSHOT
+[INFO] demo.webapps:fluffy:woapplication:0.0.1-SNAPSHOT
 [INFO] +- wonder.core:ERExtensions:jar:7.5-SNAPSHOT:compile
 [INFO] |  +- wonder.core:JavaWOExtensions:jar:7.5-SNAPSHOT:compile
 [INFO] |  +- wopatched:wonder-foundation:jar:2.0.0:compile
