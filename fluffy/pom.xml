@@ -13,47 +13,22 @@
 		<webobjects.version>5.4.3</webobjects.version>
 		<wonder.version>7.5-SNAPSHOT</wonder.version>
 
+		<!-- Java compilation -->
+		<java.version>21</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+
 		<!-- encoding properties -->
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
-		<!-- Eclipse does not run copy-resources unless this mapping says to. -->
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.apache.maven.plugins</groupId>
-										<artifactId>maven-resources-plugin</artifactId>
-										<versionRange>[1.0.0,)</versionRange>
-										<goals>
-											<goal>copy-resources</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute>
-											<runOnConfiguration>true</runOnConfiguration>
-											<runOnIncremental>true</runOnIncremental>
-										</execute>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 		<finalName>${project.artifactId}</finalName>
 		<sourceDirectory>Sources</sourceDirectory>
-		<!-- Fluffy Bunny resources. Eclipse copies this folder to target/classes. A Maven build retargets it into the .woa. -->
+		<!-- 
+		  Fluffy Bunny resources. Eclipse copies this folder to target/classes.
+		  A Maven build retargets it into the .woa.
+		-->
 		<resources>
 			<resource>
 				<directory>Resources</directory>
@@ -61,23 +36,27 @@
 		</resources>
 		<plugins>
 			<plugin>
-				<groupId>org.wocommunity</groupId>
-				<artifactId>wolifecycle-maven-plugin</artifactId>
-				<version>2.5</version>
+				<groupId>is.rebbi</groupId>
+				<artifactId>vermilingua-maven-plugin</artifactId>
+				<version>1.2.0</version>
 				<extensions>true</extensions>
+				<!-- Fluffy Bunny -->
+				<configuration>
+					<woresourcesPath>Resources</woresourcesPath>
+					<componentsPath>Components</componentsPath>
+					<webserverResourcesPath>WebServerResources</webserverResourcesPath>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
+				<version>3.14.1</version>
 			</plugin>
-			<!-- wolifecycle does not put Resources on the classpath. reload4j only finds log4j.properties in target/classes. -->
+			<!-- reload4j only finds log4j.properties in target/classes. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
 				<executions>
 					<execution>
 						<id>copy-log4j-properties</id>

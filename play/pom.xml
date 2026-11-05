@@ -13,6 +13,10 @@
 		<webobjects.version>5.4.3</webobjects.version>
 		<wonder.version>7.5-SNAPSHOT</wonder.version>
 
+		<!-- Java compilation -->
+		<java.version>21</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+
 		<!-- encoding properties -->
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,18 +26,15 @@
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.wocommunity</groupId>
-				<artifactId>wolifecycle-maven-plugin</artifactId>
-				<version>2.5</version>
+				<groupId>is.rebbi</groupId>
+				<artifactId>vermilingua-maven-plugin</artifactId>
+				<version>1.2.0</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
+				<version>3.14.1</version>
 			</plugin>
 		</plugins>
 	</build>
