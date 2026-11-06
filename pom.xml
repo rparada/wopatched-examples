@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>demo.webapps</groupId>
+    <artifactId>webapps</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Demo WebObjects Applications</name>
+
+    <!-- Applications -->
+    <modules>
+        <module>fluffy</module>
+        <module>play</module>
+    </modules>
+
+    <!-- Shared properties -->
+    <properties>
+        <!-- WebObjects and Wonder -->
+        <wonder.version>7.5-SNAPSHOT</wonder.version>
+
+        <!-- Java compilation -->
+        <java.version>21</java.version>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+
+        <!-- Encoding -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Shared artifact repositories -->
+    <repositories>
+        <repository>
+            <id>wocommunity</id>
+            <name>WOCommunity Maven 2 Releases Repository</name>
+            <url>https://maven.wocommunity.org/content/groups/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <!-- Shared plugin configuration -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.14.1</version>
+                    <configuration>
+                        <release>${maven.compiler.release}</release>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>is.rebbi</groupId>
+                    <artifactId>vermilingua-maven-plugin</artifactId>
+                    <version>1.2.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+
+                <!-- Avoid Maven having to discover compatible versions dynamically -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.5.1</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>3.2.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>3.2.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>wonder.core</groupId>
+                <artifactId>ERExtensions</artifactId>
+                <version>${wonder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>wonder.core</groupId>
+                <artifactId>WOOgnl</artifactId>
+                <version>${wonder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>wonder.core</groupId>
+                <artifactId>ERPrototypes</artifactId>
+                <version>${wonder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.25</version>
+            </dependency>
+            <dependency>
+                <groupId>is.rebbi</groupId>
+                <artifactId>wo-adaptor-jetty</artifactId>
+                <version>0.12.3</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
