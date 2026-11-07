@@ -18,23 +18,4 @@ public class Application extends ERXApplication {
 		NSLog.out.appendln("Welcome to " + name() + " !");
 		/* ** put your initialization code in here ** */
 	}
-
-	/**
-	 * Determines the WOSession class to instantiate.
-	 * @see com.webobjects.appserver.WOApplication#_sessionClass()
-	 */
-	@Override
-	protected Class< ? extends WOSession > _sessionClass() {
-		return Session.class;
-	}
-
-	/**
-	 * Install patches including ensuring that Main is correctly resolved at runtime.
-	 * @see er.extensions.appserver.ERXApplication#installPatches()
-	 */
-	@Override
-	public void installPatches() {
-		super.installPatches();
-		ERXPatcher.setClassForName(Main.class, "Main");
-	}
 }
