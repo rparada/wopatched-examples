@@ -36,12 +36,12 @@
         </dependency>
         <dependency>
             <groupId>wonder.core</groupId>
-            <artifactId>WOOgnl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>wonder.core</groupId>
             <artifactId>ERPrototypes</artifactId>
         </dependency>
+		<dependency>
+			<groupId>is.rebbi.parsley</groupId>
+			<artifactId>parsley</artifactId>
+		</dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
