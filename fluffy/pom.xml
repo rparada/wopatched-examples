@@ -84,6 +84,11 @@
             <artifactId>ERPrototypes</artifactId>
         </dependency>
         <dependency>
+			<groupId>is.rebbi</groupId>
+			<artifactId>wo-adaptor-jetty</artifactId>
+			<version>0.12.6</version>
+		</dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
         </dependency>
