@@ -41,7 +41,7 @@ cd ~/scm/wopatching
 mvn clean install
 
 cd ~/scm/wonder
-git checkout wonder-7.5-snapshot-wopatched
+git checkout git checkout wonder-7.5-snapshot-wopatched-minus-log4j-trimmed
 mvn clean install
 ```
 
