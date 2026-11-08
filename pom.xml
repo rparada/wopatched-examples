@@ -118,6 +118,16 @@
                 <version>1.6.5</version>
             </dependency>
             <dependency>
+                <groupId>is.rebbi</groupId>
+                <artifactId>wo-adaptor-jetty</artifactId>
+                <version>0.12.6</version>
+            </dependency>
+            <dependency>
+                <groupId>wonder.woadaptors</groupId>
+                <artifactId>VertxWOAdaptor</artifactId>
+                <version>${wonder.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>1.7.25</version>
