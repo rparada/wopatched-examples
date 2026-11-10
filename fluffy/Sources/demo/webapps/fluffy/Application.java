@@ -6,6 +6,7 @@ import er.extensions.appserver.ERXApplication;
 
 public class Application extends ERXApplication {
 	public static void main(String[] argv) {
+		LogUtils.logReload4jVersionAndLevels();
 		ERXApplication.main(argv, Application.class);
 	}
 
