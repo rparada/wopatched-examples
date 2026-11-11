@@ -16,7 +16,7 @@
 .settings/
 
 # IntelliJ
-.idea/
+#.idea/
 
 # Logs
 *.log

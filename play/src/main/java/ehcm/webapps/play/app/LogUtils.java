@@ -1,4 +1,4 @@
-package demo.webapps.play;
+package ehcm.webapps.play.app;
 
 import java.net.URI;
 import java.nio.file.Path;

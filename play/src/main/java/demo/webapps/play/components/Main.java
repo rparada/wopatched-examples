@@ -10,4 +10,8 @@ public class Main extends WOComponent {
 	public Main(WOContext context) {
 		super(context);
 	}
+
+	public String adaptor() throws ClassNotFoundException {
+		return Class.forName(application().adaptor()).getSimpleName();
+	}
 }

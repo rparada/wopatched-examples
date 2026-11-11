@@ -1,4 +1,4 @@
-package demo.webapps.fluffy;
+package ehcm.webapps.fluffy.app;
 
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
